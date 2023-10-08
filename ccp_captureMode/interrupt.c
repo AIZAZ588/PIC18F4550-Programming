@@ -1,0 +1,1 @@
+/* * File: interrupt.c * Author: aizaz * * Created on September 8, 2023, 4:31 PM */ #include #include "interrupt.h" void __interrupt() ISR(void) { if(PIR1bits.CCP1IF) { PIR1bits.CCP1IF =0; unsigned short TMR3 = ((unsigned short) CCPR1H

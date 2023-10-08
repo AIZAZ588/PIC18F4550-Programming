@@ -1,0 +1,1 @@
+/* * File: TMR2.c * Author: aizaz * * Created on September 9, 2023, 3:28 PM */ #include #include "TMR2.h" void TMR2_INIT(void) { PR2 = 0x7C; // 124 T2CONbits.T2CKPS = 0b01; T2CONbits.TMR2ON = 1; }

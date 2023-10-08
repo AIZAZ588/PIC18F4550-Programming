@@ -1,0 +1,32 @@
+This Problem has been resolved
+
+Here are the identified issues and their solutions:
+
+For the Master:
+1) Disable Slew Rate Control for Standard Speed mode (100 kHz and 1 MHz) by setting it to '1'.
+2) There's no need to enable ACKEN for sending data.
+3) Avoid sending data in a loop if RSEN (Repeated Start) is not enabled. It's good practice to call a function like 'tx_data' from another function.
+4) Always double-check the address of the slave to which you want to send data.
+5) If you use left shift in the address, make sure to consider it when addressing the slave.
+6) Disable the Watchdog Timer (WDT) if it's not needed.
+7) Enable LVP (Low Voltage Programming) if required.
+
+For the Slave:
+
+1) Verify the address in the slave to ensure it matches the expected address.
+2) Disable Slew Rate Control for Standard Speed mode (100 kHz and 1 MHz) by setting it to '1'.
+3) There's no need to use 'ACKEN' in the slave code, as the slave automatically sends ACK/NACK to the master.
+4) Enable interrupts in the slave code to handle incoming data or events.
+5) In the Interrupt Service Routine (ISR), check if SSPOV (Receive Overflow) or WCOL (Write Collision) occur. You can connect LEDs to indicate these conditions.
+6) Use clock stretching in the ISR to ensure that data is processed correctly, and release it at the end of the ISR.
+7) Utilize the R_nW (Read/Write) and D_NOT_A (Data/Address) bits in the ISR to determine the operation being performed.
+
+Important Note:
+
+1)  Make New project: I cleaned and built the same projects again and again over 50 times and removed some files from my project in MPLAB X IDE but when I saw the folder, it was still there. 
+then I created a new project and it pasted the only files I wanted to build and it worked in proteus 
+2) Use Protues Debugger for  debugging 
+
+You can find the updated code in my repository at GitHub - AIZAZ588.
+
+If anyone finds any errors or has additional insights, please feel free to provide corrections or suggestions, as I am a student and a beginner. Your feedback is valuable!

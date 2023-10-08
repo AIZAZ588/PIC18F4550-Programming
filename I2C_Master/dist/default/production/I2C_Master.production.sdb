@@ -1,0 +1,260 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"4 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 C:\Program Files\Microchip\xc8\v2.45\pic\sources\c99\common\Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"31 D:\OLD\Fall 22\Embedded system\Pract\I2C_Master\main.c
+[v _main main `(v  1 e 1 0 ]
+"59
+[v _port_initalization port_initalization `(v  1 e 1 0 ]
+"65
+[v _i2c_initalization i2c_initalization `(v  1 e 1 0 ]
+"70
+[v _I2C_interruptFlagPolling I2C_interruptFlagPolling `(v  1 s 1 I2C_interruptFlagPolling ]
+"80
+[v _I2C_open I2C_open `(v  1 s 1 I2C_open ]
+"87
+[v _I2C_close I2C_close `(v  1 s 1 I2C_close ]
+"92
+[v _I2C_startCondition I2C_startCondition `(v  1 s 1 I2C_startCondition ]
+"98
+[v _I2C_stopCondition I2C_stopCondition `(v  1 s 1 I2C_stopCondition ]
+"104
+[v _I2C_sendData I2C_sendData `(v  1 s 1 I2C_sendData ]
+"109
+[v _I2C_getAckstatBit I2C_getAckstatBit `(uc  1 s 1 I2C_getAckstatBit ]
+"114
+[v _I2C_write1ByteRegister I2C_write1ByteRegister `(v  1 s 1 I2C_write1ByteRegister ]
+[s S230 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"3100 C:/Users/aizaz/.mchp_packs/Microchip/PIC18Fxxxx_DFP/1.5.156/xc8\pic\include\proc\pic18f4550.h
+[s S239 . 1 `uc 1 LB0 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+`uc 1 LB2 1 0 :1:2 
+`uc 1 LB3 1 0 :1:3 
+`uc 1 LB4 1 0 :1:4 
+`uc 1 LB5 1 0 :1:5 
+`uc 1 LB6 1 0 :1:6 
+`uc 1 LB7 1 0 :1:7 
+]
+[u S248 . 1 `S230 1 . 1 0 `S239 1 . 1 0 ]
+[v _LATBbits LATBbits `VES248  1 e 1 @3978 ]
+[s S270 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"3208
+[s S277 . 1 `uc 1 LC0 1 0 :1:0 
+`uc 1 LC1 1 0 :1:1 
+`uc 1 LC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 LC6 1 0 :1:6 
+`uc 1 LC7 1 0 :1:7 
+]
+[u S284 . 1 `S270 1 . 1 0 `S277 1 . 1 0 ]
+[v _LATCbits LATCbits `VES284  1 e 1 @3979 ]
+"3263
+[v _LATD LATD `VEuc  1 e 1 @3980 ]
+[s S26 . 1 `uc 1 TRISB0 1 0 :1:0 
+`uc 1 TRISB1 1 0 :1:1 
+`uc 1 TRISB2 1 0 :1:2 
+`uc 1 TRISB3 1 0 :1:3 
+`uc 1 TRISB4 1 0 :1:4 
+`uc 1 TRISB5 1 0 :1:5 
+`uc 1 TRISB6 1 0 :1:6 
+`uc 1 TRISB7 1 0 :1:7 
+]
+"3657
+[s S35 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+[u S44 . 1 `S26 1 . 1 0 `S35 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES44  1 e 1 @3987 ]
+[s S66 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"3875
+[s S73 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+[u S80 . 1 `S66 1 . 1 0 `S73 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES80  1 e 1 @3988 ]
+"4001
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+[s S174 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 SPPIF 1 0 :1:7 
+]
+"4492
+[s S183 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+[u S189 . 1 `S174 1 . 1 0 `S183 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES189  1 e 1 @3998 ]
+[s S112 . 1 `uc 1 PCFG 1 0 :4:0 
+`uc 1 VCFG 1 0 :2:4 
+]
+"6606
+[s S115 . 1 `uc 1 PCFG0 1 0 :1:0 
+`uc 1 PCFG1 1 0 :1:1 
+`uc 1 PCFG2 1 0 :1:2 
+`uc 1 PCFG3 1 0 :1:3 
+`uc 1 VCFG0 1 0 :1:4 
+`uc 1 VCFG1 1 0 :1:5 
+]
+[s S122 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CHSN3 1 0 :1:3 
+`uc 1 VCFG01 1 0 :1:4 
+`uc 1 VCFG11 1 0 :1:5 
+]
+[u S127 . 1 `S112 1 . 1 0 `S115 1 . 1 0 `S122 1 . 1 0 ]
+[v _ADCON1bits ADCON1bits `VES127  1 e 1 @4033 ]
+[s S208 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"6823
+[u S217 . 1 `S208 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES217  1 e 1 @4037 ]
+[s S147 . 1 `uc 1 SSPM 1 0 :4:0 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"6888
+[s S153 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+]
+[u S158 . 1 `S147 1 . 1 0 `S153 1 . 1 0 ]
+[v _SSPCON1bits SSPCON1bits `VES158  1 e 1 @4038 ]
+"7186
+[v _SSPADD SSPADD `VEuc  1 e 1 @4040 ]
+"7193
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @4041 ]
+"31 D:\OLD\Fall 22\Embedded system\Pract\I2C_Master\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"57
+} 0
+"59
+[v _port_initalization port_initalization `(v  1 e 1 0 ]
+{
+"63
+} 0
+"65
+[v _i2c_initalization i2c_initalization `(v  1 e 1 0 ]
+{
+"68
+} 0
+"114
+[v _I2C_write1ByteRegister I2C_write1ByteRegister `(v  1 s 1 I2C_write1ByteRegister ]
+{
+[v I2C_write1ByteRegister@address address `uc  1 a 1 wreg ]
+[v I2C_write1ByteRegister@address address `uc  1 a 1 wreg ]
+[v I2C_write1ByteRegister@data data `uc  1 p 1 1 ]
+"117
+[v I2C_write1ByteRegister@address address `uc  1 a 1 2 ]
+"138
+} 0
+"98
+[v _I2C_stopCondition I2C_stopCondition `(v  1 s 1 I2C_stopCondition ]
+{
+"102
+} 0
+"92
+[v _I2C_startCondition I2C_startCondition `(v  1 s 1 I2C_startCondition ]
+{
+"96
+} 0
+"104
+[v _I2C_sendData I2C_sendData `(v  1 s 1 I2C_sendData ]
+{
+[v I2C_sendData@byte byte `uc  1 a 1 wreg ]
+[v I2C_sendData@byte byte `uc  1 a 1 wreg ]
+[v I2C_sendData@byte byte `uc  1 a 1 0 ]
+"107
+} 0
+"70
+[v _I2C_interruptFlagPolling I2C_interruptFlagPolling `(v  1 s 1 I2C_interruptFlagPolling ]
+{
+"78
+} 0
+"80
+[v _I2C_open I2C_open `(v  1 s 1 I2C_open ]
+{
+"85
+} 0
+"109
+[v _I2C_getAckstatBit I2C_getAckstatBit `(uc  1 s 1 I2C_getAckstatBit ]
+{
+"112
+} 0
+"87
+[v _I2C_close I2C_close `(v  1 s 1 I2C_close ]
+{
+"90
+} 0

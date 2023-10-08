@@ -1,0 +1,1 @@
+#include "interruts.h" #include void int_interrupt(void) { INTCONbits.GIE = 1; INTCON2bits.TMR0IP = 1; INTCONbits.TMR0IF = 0; INTCONbits.TMR0IE = 1; } void __interrupt() ISR(void) { if(INTCONbits.TMR0IF) { INTCONbits.TMR0IF = 0; LATD =~LATD; } }

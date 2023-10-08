@@ -1,0 +1,1 @@
+void TMR2_INIT(void);
