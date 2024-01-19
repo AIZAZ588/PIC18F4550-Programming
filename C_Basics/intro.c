@@ -1,7 +1,7 @@
 #include <stdio.h>
 void data(char* data)
 {
-    while (*data != NULL)
+    while (*data != '\0')
     {
         printf("%c", *data);
         ++data;

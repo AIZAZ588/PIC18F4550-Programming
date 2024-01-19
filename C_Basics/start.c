@@ -1,7 +1,7 @@
 #include<stdio.h>
-#define __TEST__        0
-#define __PACKING__     
-#define __STRUCT__      1
+#define __TEST__        1
+// #define __PACKING__     
+// #define __STRUCT__      
 typedef unsigned char uint8;
 typedef unsigned __int8 s8;
 
