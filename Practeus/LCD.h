@@ -1,0 +1,75 @@
+/* Microchip Technology Inc. and its subsidiaries.  You may use this software 
+ * and any derivatives exclusively with Microchip products. 
+ * 
+ * THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS".  NO WARRANTIES, WHETHER 
+ * EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED 
+ * WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A 
+ * PARTICULAR PURPOSE, OR ITS INTERACTION WITH MICROCHIP PRODUCTS, COMBINATION 
+ * WITH ANY OTHER PRODUCTS, OR USE IN ANY APPLICATION. 
+ *
+ * IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
+ * INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND 
+ * WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS 
+ * BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE.  TO THE 
+ * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS 
+ * IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF 
+ * ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
+ *
+ * MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE 
+ * TERMS. 
+ */
+
+/* 
+ * File:   
+ * Author: 
+ * Comments:
+ * Revision history: 
+ */
+
+#define DATA PORTD
+#define DATA_DIR TRISD
+
+#define RS_DIR TRISBbits.RB2 
+#define RS PORTBbits.RB2
+
+#define E_DIR TRISBbits.RB4
+#define E PORTBbits.RB4
+
+void INIT_LCD(void);
+void CMD_LCD(char);
+
+void DATA_LCD(char);
+void LCD_WRITE(char*);
+
+
+void INIT_LCD(){
+    DATA_DIR = 0;
+    RS_DIR = 0;
+    E_DIR = 0;
+    CMD_LCD(0b00000110); // Entry mode Set
+    CMD_LCD(0b00001111); // Display ON/OFF
+    CMD_LCD(0b00111100); // Set Function
+}
+void CMD_LCD(char CMD){
+    RS = 0;
+    E = 1;
+    __delay_ms(1);
+    DATA = CMD;
+    E = 0;
+    __delay_ms(5);
+}
+void DATA_LCD(char CMD){
+    RS = 1;
+    E = 1;
+    __delay_ms(1);
+    DATA = CMD;
+    E = 0;
+    __delay_ms(5);
+}
+void LCD_WRITE(char* data){
+    while (*data != '\0'){
+        DATA_LCD(*data);
+        ++data;
+    }
+}
+
